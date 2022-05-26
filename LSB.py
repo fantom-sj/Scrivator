@@ -34,7 +34,7 @@ def LSB_M_enc(img, text, start, end, sdvig, raid=0.25):
     binary_text = text_to_binary(start) + text_to_binary(text) + text_to_binary(end)
     raid = round(3 / raid)
 
-    index = sdvig
+    index = round(sdvig * raid)
     for ch in binary_text:
         arr_bit_ch = number_to_bin_arr(ch)
         for bit in arr_bit_ch:
